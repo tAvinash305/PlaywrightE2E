@@ -4,7 +4,9 @@ test('test', async ({ page }) => {
   // to generate code automatically in playwright
   // npx playwright codegen
 
-  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', {
+    waitUntil: 'domcontentloaded'
+  });
   await page.getByRole('textbox', { name: 'Username' }).click();
   await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
   await page.getByRole('textbox', { name: 'Password' }).click();
