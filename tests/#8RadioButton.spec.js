@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 
-test.only("Radio Buttons", async ({ page }) => {
+test("Radio Buttons", async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
 
     const femaleField = await page.locator("//input[@id='female']");
